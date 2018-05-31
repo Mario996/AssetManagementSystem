@@ -62,17 +62,29 @@ namespace LocalController
                                 {
                                     ld.LocalDeviceValue = rand.Next(0, 2);
                                     ld.LocalDeviceValues.Add(ld.LocalDeviceValue);
-                                    // SaveToLC(ld.LocalDeviceCode, $@"../Debug/Devices/{ld.LocalDeviceCode}_{ld.LocalDeviceControllerCode}.xml", ld.LocalDeviceValue);
-                                    SaveToLC(ld.LocalDeviceCode, $@"../Debug/Devices/{ld.LocalDeviceControllerCode}.xml", ld.LocalDeviceValue);
+                                    if(ld.LocalDeviceDestination.Equals("Local controller"))
+                                    {
+                                        SaveToLC(ld.LocalDeviceCode, $@"../Debug/Devices/{ld.LocalDeviceControllerCode}.xml", ld.LocalDeviceValue);
+                                    }
+                                    else
+                                    {
+                                        SaveToAMS(ld.LocalDeviceCode, $"../../../AMS/bin/Debug/Controllers/ams.xml", ld.LocalDeviceValue, ld.LocalDeviceControllerCode);
+                                    }
                                     
                                 }
                                 else
                                 {
                                     ld.LocalDeviceValue = rand.Next(210, 240);
                                     ld.LocalDeviceValues.Add(ld.LocalDeviceValue);
-                                    SaveToLC(ld.LocalDeviceCode, $@"../Debug/Devices/{ld.LocalDeviceControllerCode}.xml", ld.LocalDeviceValue);
-                                    // SaveToLC(ld.LocalDeviceCode, $@"../Debug/Devices/{ld.LocalDeviceCode}_{ld.LocalDeviceControllerCode}.xml", ld.LocalDeviceValue);
-
+                                    if(ld.LocalDeviceDestination.Equals("Local controller"))
+                                    {
+                                        SaveToLC(ld.LocalDeviceCode, $@"../Debug/Devices/{ld.LocalDeviceControllerCode}.xml", ld.LocalDeviceValue);
+                                    }
+                                    else
+                                    {
+                                        SaveToAMS(ld.LocalDeviceCode, $"../../../AMS/bin/Debug/Controllers/ams.xml", ld.LocalDeviceValue, ld.LocalDeviceControllerCode);
+                                    }
+                                    
                                 }
                             }
                         }
@@ -180,7 +192,7 @@ namespace LocalController
 
                     }
 
-                   Thread.Sleep(10000);
+                   Thread.Sleep(5000);
                 }
             });
             thread1.IsBackground = true;
@@ -244,6 +256,69 @@ namespace LocalController
                     element.Add(new XElement("value", value.ToString()));
                     doc1.Save(file);
                }
+            }
+        }
+
+        public void SaveToAMS(string code, string file, int value, string controllerCode)
+        {
+            XmlWriterSettings xmlWriterSettings = new XmlWriterSettings();
+            xmlWriterSettings.Indent = true;
+            xmlWriterSettings.NewLineOnAttributes = true;
+
+            if (!File.Exists(file))
+            {
+                xmlWriter = XmlWriter.Create(file, xmlWriterSettings);
+
+                using (xmlWriter)
+                {
+                    xmlWriter.WriteStartDocument();
+                    xmlWriter.WriteStartElement("device");
+                    xmlWriter.WriteAttributeString("code", code);
+
+                    xmlWriter.WriteStartElement("time");
+                    xmlWriter.WriteRaw(DateTime.Now.ToString());
+                    xmlWriter.WriteEndElement();
+
+                    xmlWriter.WriteStartElement("value");
+                    xmlWriter.WriteRaw(value.ToString());
+
+                    xmlWriter.WriteEndElement();
+
+                    xmlWriter.WriteEndElement(); //zatvoren device
+                    xmlWriter.WriteEndDocument();
+                    xmlWriter.Flush();
+                    xmlWriter.Close();
+
+                }
+            }
+            else
+            {
+
+                XElement doc1 = XElement.Load(file);
+                XElement element = (from el in doc1.Elements() where (string)el.Attribute("code").Value == code select el).FirstOrDefault();
+
+                if (element == null)
+                {
+                    XDocument doc = XDocument.Load(file);
+                    XElement root = new XElement("controller");
+                    XElement device = new XElement("device");
+                    device.Add(new XAttribute("code", code));
+                    root.Add(new XAttribute("time", DateTime.Now.ToString()));
+                    root.Add(new XAttribute("code", controllerCode));
+                    root.Add(device);
+                    root.Add(new XElement("time", DateTime.Now.ToString()));
+                    root.Add(new XElement("value", value.ToString()));
+                    doc.Element("controllers").Add(root);
+                    //doc.Add(root);
+                    doc.Save(file);
+
+                }
+                else
+                {
+                    element.Add(new XElement("time", DateTime.Now.ToString()));
+                    element.Add(new XElement("value", value.ToString()));
+                    doc1.Save(file);
+                }
             }
         }
 

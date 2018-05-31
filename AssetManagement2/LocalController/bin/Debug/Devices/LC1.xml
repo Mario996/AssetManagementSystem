@@ -1,91 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <devices>
   <device code="LD1">
-    <time>5/29/2018 5:34:45 PM</time>
-    <value>1</value>
-    <time>5/29/2018 5:34:46 PM</time>
-    <value>1</value>
-    <time>5/29/2018 5:34:47 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:34:48 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:34:49 PM</time>
-    <value>1</value>
-    <time>5/29/2018 5:34:50 PM</time>
-    <value>1</value>
-    <time>5/29/2018 5:34:51 PM</time>
-    <value>1</value>
-    <time>5/29/2018 5:34:52 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:34:53 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:34:54 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:34:55 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:34:56 PM</time>
-    <value>1</value>
-    <time>5/29/2018 5:34:57 PM</time>
-    <value>1</value>
-    <time>5/29/2018 5:34:58 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:34:59 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:35:00 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:35:01 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:35:02 PM</time>
-    <value>1</value>
-    <time>5/29/2018 5:35:03 PM</time>
-    <value>1</value>
-    <time>5/29/2018 5:35:04 PM</time>
-    <value>1</value>
-    <time>5/29/2018 5:35:05 PM</time>
-    <value>1</value>
-    <time>5/29/2018 5:35:06 PM</time>
-    <value>1</value>
-    <time>5/29/2018 5:35:07 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:35:08 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:35:09 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:35:10 PM</time>
-    <value>0</value>
-  </device>
-  <device code="LD2">
-    <time>5/29/2018 5:34:55 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:34:56 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:34:57 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:34:58 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:34:59 PM</time>
-    <value>1</value>
-    <time>5/29/2018 5:35:00 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:35:01 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:35:02 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:35:03 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:35:04 PM</time>
-    <value>1</value>
-    <time>5/29/2018 5:35:05 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:35:06 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:35:07 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:35:08 PM</time>
-    <value>0</value>
-    <time>5/29/2018 5:35:09 PM</time>
-    <value>1</value>
-    <time>5/29/2018 5:35:10 PM</time>
-    <value>0</value>
+    <time>31-May-18 16:45:54</time>
+    <value>224</value>
+    <time>31-May-18 16:45:55</time>
+    <value>216</value>
+    <time>31-May-18 16:45:57</time>
+    <value>220</value>
   </device>
 </devices>
