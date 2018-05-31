@@ -17,6 +17,7 @@ namespace LocalController.Classes
         private string localDeviceType; //mi unosimo, radio button
         private bool localDeviceState; //u pocetku je ugasen, metodama ga palimo i gasimo
         private string localDeviceDestination; //mi unosimo, combobox
+        private string localDeviceControllerName;
         
 
         private static int localDeviceCount = 0;
@@ -142,6 +143,8 @@ namespace LocalController.Classes
                 }
             }
         }
+
+        public string LocalDeviceControllerName { get => localDeviceControllerName; set => localDeviceControllerName = value; }
         #endregion
 
         public LocalDevice()
@@ -153,9 +156,11 @@ namespace LocalController.Classes
             localDeviceState = false;
             localDeviceType = "";
             localDeviceDestination = "";
-        }
+            localDeviceControllerName = "";
 
-        public LocalDevice(double period, int limit, string type, string destination)
+    }
+
+    public LocalDevice(double period, int limit, string type, string destination, string controllerName)
         {
             localDeviceCount++;
             localDeviceCode = "LD" + localDeviceCount.ToString();
@@ -165,9 +170,11 @@ namespace LocalController.Classes
             localDeviceState = false;
             localDeviceType = type;
             localDeviceDestination = destination;
-        }
+            localDeviceControllerName = controllerName;
 
-        public void TurnOn()
+    }
+
+    public void TurnOn()
         {
             if(this.LocalDeviceState)
             {

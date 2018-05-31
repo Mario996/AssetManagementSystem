@@ -15,6 +15,7 @@ namespace LocalController.Classes
         private bool localControllerState;
         private static Dictionary<LocalDevice, List<int>> localControllerValuesHistory;
         private static int localControllerCount = 0;
+        private List<LocalDevice> deviceList;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -69,6 +70,23 @@ namespace LocalController.Classes
             }
         }
 
+        public List<LocalDevice> DeviceList
+        {
+            get
+            {
+                return deviceList;
+            }
+
+            set
+            {
+                if (deviceList != value)
+                {
+                    deviceList = value;
+                    RaisePropertyChanged("DeviceList");
+                }
+            }
+        }
+
         public static Dictionary<LocalDevice, List<int>> LocalControllerValuesHistory { get => localControllerValuesHistory; set => localControllerValuesHistory = value; }
 
         public LocalController()
@@ -77,15 +95,17 @@ namespace LocalController.Classes
             localControllerPeriod = -1;
             localControllerState = false;
             LocalControllerValuesHistory = new Dictionary<LocalDevice, List<int>>();
+            deviceList = new List<LocalDevice>();
         }
 
-        public LocalController(double period)
+        public LocalController(double period, string controllerCode)
         {
             localControllerCount++;
-            localControllerCode = "LC" + localControllerCount;
+            localControllerCode = controllerCode;
             localControllerPeriod = period;
             localControllerState = false;
             LocalControllerValuesHistory = new Dictionary<LocalDevice, List<int>>();
+            deviceList = new List<LocalDevice>();
         }
 
         private void RaisePropertyChanged(string property)

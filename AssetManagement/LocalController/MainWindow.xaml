@@ -31,7 +31,7 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>-->
-        <DataGrid x:Name="dataGridDevice" ItemsSource="{Binding LocalDeviceList}"  IsReadOnly="True"  SelectionMode="Single" Background="White" Opacity="0.7" Foreground="#FF1E3A51"  AutoGenerateColumns="False" HorizontalAlignment="Left" Height="295" Margin="10,28,0,0" VerticalAlignment="Top" Width="773" >
+        <DataGrid x:Name="dataGridDevice" ItemsSource="{Binding DeviceList}"  IsReadOnly="True"  SelectionMode="Single" Background="White" Opacity="0.7" Foreground="#FF1E3A51"  AutoGenerateColumns="False" HorizontalAlignment="Left" Height="295" Margin="10,28,0,0" VerticalAlignment="Top" Width="773" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Code"  Binding="{Binding LocalDeviceCode}" Width="*" />
                 <DataGridTextColumn Header="Type" Binding="{Binding LocalDeviceType}" Width="*" />

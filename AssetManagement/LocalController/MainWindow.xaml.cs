@@ -44,7 +44,7 @@ namespace LocalController
             var thread1 = new Thread(() =>
             {
                 while (true)
-                {                   
+                {       
                     lock(LocalDeviceList)
                     {
 
