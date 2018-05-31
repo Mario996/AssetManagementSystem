@@ -43,6 +43,7 @@ namespace LocalController
             DataContext = this;
             ChangeValue();
             SendToAMS();
+            DeleteBuffer();
         }
 
         private void ChangeValue()
@@ -77,6 +78,45 @@ namespace LocalController
                         }
                         Thread.Sleep(1000);
                     }
+                }
+            });
+            thread1.IsBackground = true;
+            thread1.Start();
+        }
+
+        private void DeleteBuffer()
+        {
+            string path = $@"./Devices";
+            string trazenoImeFilea = "";
+            var thread1 = new Thread(() =>
+            {
+                while (true)
+                {
+                    foreach (LocalController.Classes.LocalController lc in LocalControllerList)
+                    {
+                        if (Directory.EnumerateFileSystemEntries(path).Any())
+                        {
+                            if (lc.LocalControllerState)
+                            {
+                                string[] files = Directory.GetFiles(path);
+                                foreach (string filename in files)
+                                {
+                                    //./Devices\\LC1.xml
+                                    var temp = filename.Substring(10, lc.LocalControllerCode.Length);
+                                    if (lc.LocalControllerCode.Equals(temp))
+                                    {
+                                        trazenoImeFilea = temp;
+                                        break;
+                                    }
+                                }
+
+                                File.Delete(path + "/" + trazenoImeFilea + ".xml");
+                            }
+                        }
+
+                    }
+                    Thread.Sleep(6000);
+
                 }
             });
             thread1.IsBackground = true;
@@ -146,49 +186,6 @@ namespace LocalController
             thread1.IsBackground = true;
             thread1.Start();
         }
-
-       /* public void SaveToLC(string code, string file, int value)
-        {
-            XmlWriterSettings xmlWriterSettings = new XmlWriterSettings();
-            xmlWriterSettings.Indent = true;
-            xmlWriterSettings.NewLineOnAttributes = true;
-
-            if (!File.Exists(file))
-            {
-                xmlWriter = XmlWriter.Create(file, xmlWriterSettings);
-                using (xmlWriter)
-                {
-                    xmlWriter.WriteStartDocument();
-                    xmlWriter.WriteStartElement("device");
-                    xmlWriter.WriteAttributeString("code", code);
-
-                    xmlWriter.WriteStartElement("time");
-                    xmlWriter.WriteRaw(DateTime.Now.ToString());
-                    xmlWriter.WriteEndElement();
-
-                    xmlWriter.WriteStartElement("value");
-                    xmlWriter.WriteRaw(value.ToString());
-
-                    xmlWriter.WriteEndElement();
-
-                    xmlWriter.WriteEndElement();
-                    xmlWriter.WriteEndDocument();
-                    xmlWriter.Flush();
-                    xmlWriter.Close();
-
-                }
-            }
-            else
-            {
-                XDocument document = XDocument.Load(file);
-                XElement element = document.Element("device");
-
-                element.Add(new XElement("time", DateTime.Now.ToString()));
-                element.Add(new XElement("value", value.ToString()));
-
-                document.Save(file);
-            }
-        }*/
 
         public void SaveToLC(string code, string file, int value)
         {
