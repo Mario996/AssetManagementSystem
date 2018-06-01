@@ -1,8 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <devices>
   <device code="LD1">
+<<<<<<< HEAD
     <value time="6/1/2018 3:01:26 PM">0</value>
     <value time="6/1/2018 3:01:27 PM">0</value>
     <value time="6/1/2018 3:01:28 PM">1</value>
+=======
+    <time>31-May-18 16:45:54</time>
+    <value>224</value>
+    <time>31-May-18 16:45:55</time>
+    <value>216</value>
+    <time>31-May-18 16:45:57</time>
+    <value>220</value>
+>>>>>>> 3443762573aa2808b501eeaeb43e04f08e0eb41d
   </device>
 </devices>

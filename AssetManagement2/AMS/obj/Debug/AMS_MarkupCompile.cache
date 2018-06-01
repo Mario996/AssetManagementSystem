@@ -4,15 +4,23 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\Ivana\Desktop\AssetManagement2\AMS\obj\Debug\
+=======
+C:\Users\Mario\Desktop\gitfolder\AssetManagement2\AMS\obj\Debug\
+>>>>>>> 3443762573aa2808b501eeaeb43e04f08e0eb41d
 AMS
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\Ivana\Desktop\AssetManagement2\AMS\App.xaml
+=======
+C:\Users\Mario\Desktop\gitfolder\AssetManagement2\AMS\App.xaml
+>>>>>>> 3443762573aa2808b501eeaeb43e04f08e0eb41d
 11151548125
 
-91830342115
+9-1544770448
 131569487696
 MainWindow.xaml;
 

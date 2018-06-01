@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <controllers>
+<<<<<<< HEAD
   <controller code="LC1" time="6/1/2018 3:00:29 PM">
     <device code="LD1">
       <value time="6/1/2018 3:00:28 PM">0</value>
@@ -277,6 +278,430 @@
       <value time="6/1/2018 3:01:26 PM">0</value>
       <value time="6/1/2018 3:01:27 PM">0</value>
       <value time="6/1/2018 3:01:28 PM">1</value>
+=======
+  <controller code="LC1" time="31-May-18 16:44:51">
+    <device code="LD1">
+      <time>31-May-18 16:44:48</time>
+      <value>236</value>
+      <time>31-May-18 16:44:49</time>
+      <value>211</value>
+      <time>31-May-18 16:44:50</time>
+      <value>219</value>
+      <time>31-May-18 16:44:51</time>
+      <value>237</value>
     </device>
+  </controller>
+  <controller code="LC1" time="31-May-18 16:44:56">
+    <device code="LD1">
+      <time>31-May-18 16:44:54</time>
+      <value>217</value>
+      <time>31-May-18 16:44:55</time>
+      <value>225</value>
+      <time>31-May-18 16:44:56</time>
+      <value>210</value>
+    </device>
+  </controller>
+  <controller time="31-May-18 16:44:59" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:44:59</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:00" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:00</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:01" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:01</time>
+    <value>0</value>
+  </controller>
+  <controller code="LC1" time="31-May-18 16:45:01">
+    <device code="LD1">
+      <time>31-May-18 16:45:00</time>
+      <value>221</value>
+      <time>31-May-18 16:45:01</time>
+      <value>217</value>
+    </device>
+  </controller>
+  <controller time="31-May-18 16:45:02" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:02</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:03" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:03</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:04" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:04</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:05" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:05</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:06" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:06</time>
+    <value>1</value>
+  </controller>
+  <controller code="LC1" time="31-May-18 16:45:06">
+    <device code="LD1">
+      <time>31-May-18 16:45:06</time>
+      <value>229</value>
+    </device>
+  </controller>
+  <controller time="31-May-18 16:45:07" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:07</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:08" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:08</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:09" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:09</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:10" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:10</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:11" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:11</time>
+    <value>1</value>
+  </controller>
+  <controller code="LC1" time="31-May-18 16:45:11">
+    <device code="LD1">
+      <time>31-May-18 16:45:06</time>
+      <value>229</value>
+      <time>31-May-18 16:45:07</time>
+      <value>238</value>
+      <time>31-May-18 16:45:08</time>
+      <value>233</value>
+      <time>31-May-18 16:45:09</time>
+      <value>228</value>
+      <time>31-May-18 16:45:10</time>
+      <value>230</value>
+      <time>31-May-18 16:45:11</time>
+      <value>212</value>
+    </device>
+  </controller>
+  <controller time="31-May-18 16:45:12" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:12</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:13" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:13</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:14" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:14</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:15" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:15</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:16" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:16</time>
+    <value>0</value>
+  </controller>
+  <controller code="LC1" time="31-May-18 16:45:16">
+    <device code="LD1">
+      <time>31-May-18 16:45:12</time>
+      <value>225</value>
+      <time>31-May-18 16:45:13</time>
+      <value>229</value>
+      <time>31-May-18 16:45:14</time>
+      <value>239</value>
+      <time>31-May-18 16:45:15</time>
+      <value>236</value>
+      <time>31-May-18 16:45:16</time>
+      <value>239</value>
+    </device>
+  </controller>
+  <controller time="31-May-18 16:45:17" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:17</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:18" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:18</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:19" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:19</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:20" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:20</time>
+    <value>1</value>
+  </controller>
+  <controller code="LC1" time="31-May-18 16:45:21">
+    <device code="LD1">
+      <time>31-May-18 16:45:18</time>
+      <value>233</value>
+      <time>31-May-18 16:45:19</time>
+      <value>223</value>
+      <time>31-May-18 16:45:20</time>
+      <value>221</value>
+    </device>
+  </controller>
+  <controller time="31-May-18 16:45:21" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:21</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:22" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:22</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:23" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:23</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:24" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:24</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:25" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:25</time>
+    <value>0</value>
+  </controller>
+  <controller code="LC1" time="31-May-18 16:45:26">
+    <device code="LD1">
+      <time>31-May-18 16:45:24</time>
+      <value>218</value>
+      <time>31-May-18 16:45:25</time>
+      <value>217</value>
+    </device>
+  </controller>
+  <controller time="31-May-18 16:45:26" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:26</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:27" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:27</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:28" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:28</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:29" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:29</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:30" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:30</time>
+    <value>1</value>
+  </controller>
+  <controller code="LC1" time="31-May-18 16:45:31">
+    <device code="LD1">
+      <time>31-May-18 16:45:30</time>
+      <value>230</value>
+>>>>>>> 3443762573aa2808b501eeaeb43e04f08e0eb41d
+    </device>
+  </controller>
+  <controller time="31-May-18 16:45:31" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:31</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:32" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:32</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:33" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:33</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:34" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:34</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:35" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:35</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:36" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:36</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:37" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:37</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:38" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:38</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:39" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:39</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:40" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:40</time>
+    <value>0</value>
+  </controller>
+  <controller code="LC1" time="31-May-18 16:45:41">
+    <device code="LD1">
+      <time>31-May-18 16:45:36</time>
+      <value>226</value>
+      <time>31-May-18 16:45:37</time>
+      <value>231</value>
+      <time>31-May-18 16:45:38</time>
+      <value>229</value>
+      <time>31-May-18 16:45:39</time>
+      <value>237</value>
+      <time>31-May-18 16:45:40</time>
+      <value>235</value>
+    </device>
+  </controller>
+  <controller time="31-May-18 16:45:41" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:41</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:42" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:42</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:43" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:43</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:44" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:44</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:45" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:45</time>
+    <value>1</value>
+  </controller>
+  <controller code="LC1" time="31-May-18 16:45:46">
+    <device code="LD1">
+      <time>31-May-18 16:45:42</time>
+      <value>229</value>
+      <time>31-May-18 16:45:43</time>
+      <value>218</value>
+      <time>31-May-18 16:45:44</time>
+      <value>214</value>
+      <time>31-May-18 16:45:45</time>
+      <value>239</value>
+    </device>
+  </controller>
+  <controller time="31-May-18 16:45:46" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:46</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:47" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:47</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:48" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:48</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:49" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:49</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:50" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:50</time>
+    <value>0</value>
+  </controller>
+  <controller code="LC1" time="31-May-18 16:45:51">
+    <device code="LD1">
+      <time>31-May-18 16:45:48</time>
+      <value>225</value>
+      <time>31-May-18 16:45:49</time>
+      <value>217</value>
+      <time>31-May-18 16:45:50</time>
+      <value>228</value>
+    </device>
+  </controller>
+  <controller time="31-May-18 16:45:51" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:51</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:52" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:52</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:53" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:53</time>
+    <value>1</value>
+  </controller>
+  <controller time="31-May-18 16:45:54" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:54</time>
+    <value>0</value>
+  </controller>
+  <controller time="31-May-18 16:45:56" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:56</time>
+    <value>1</value>
+  </controller>
+  <controller code="LC1" time="31-May-18 16:45:56">
+    <device code="LD1">
+      <time>31-May-18 16:45:54</time>
+      <value>224</value>
+      <time>31-May-18 16:45:55</time>
+      <value>216</value>
+    </device>
+  </controller>
+  <controller time="31-May-18 16:45:57" code="LC2">
+    <device code="LD2" />
+    <time>31-May-18 16:45:57</time>
+    <value>0</value>
   </controller>
 </controllers>

@@ -62,7 +62,10 @@ namespace LocalController
                                 {
                                     ld.LocalDeviceValue = rand.Next(0, 2);
                                     ld.LocalDeviceValues.Add(ld.LocalDeviceValue);
+<<<<<<< HEAD
                                     
+=======
+>>>>>>> 3443762573aa2808b501eeaeb43e04f08e0eb41d
                                     if(ld.LocalDeviceDestination.Equals("Local controller"))
                                     {
                                         SaveToLC(ld.LocalDeviceCode, $@"../Debug/Devices/{ld.LocalDeviceControllerCode}.xml", ld.LocalDeviceValue);
@@ -246,24 +249,34 @@ namespace LocalController
                     XDocument doc = XDocument.Load(file);
                     XElement root = new XElement("device");
                     root.Add(new XAttribute("code", code));
+<<<<<<< HEAD
                     XElement val = new XElement("value", value.ToString());
                     val.Add(new XAttribute("time", DateTime.Now.ToString()));
                     root.Add(val);
                     // root.Add(new XElement("time", DateTime.Now.ToString()));
                    // root.Add(new XElement("value", value.ToString()),new XAttribute("time", DateTime.Now.ToString()));
                     //root.Add(new XAttribute("time", DateTime.Now.ToString()));
+=======
+                    root.Add(new XElement("time", DateTime.Now.ToString()));
+                    root.Add(new XElement("value", value.ToString()));
+>>>>>>> 3443762573aa2808b501eeaeb43e04f08e0eb41d
                     doc.Element("devices").Add(root);
                     doc.Save(file);
 
                }
                else
                {
+<<<<<<< HEAD
                     XElement val = new XElement("value", value.ToString());
                     val.Add(new XAttribute("time", DateTime.Now.ToString()));
                     element.Add(val);
                     // element.Add(new XElement("time", DateTime.Now.ToString()));
                     // element.Add(new XElement("value", value.ToString()), new XAttribute("time", DateTime.Now.ToString()));
                     // element.Add(new XAttribute("time", DateTime.Now.ToString()));
+=======
+                    element.Add(new XElement("time", DateTime.Now.ToString()));
+                    element.Add(new XElement("value", value.ToString()));
+>>>>>>> 3443762573aa2808b501eeaeb43e04f08e0eb41d
                     doc1.Save(file);
                }
             }
@@ -317,11 +330,16 @@ namespace LocalController
                     root.Add(new XAttribute("time", DateTime.Now.ToString()));
                     root.Add(new XAttribute("code", controllerCode));
                     root.Add(device);
+<<<<<<< HEAD
                     XElement val = new XElement("value", value.ToString());
                     val.Add(new XAttribute("time", DateTime.Now.ToString()));
                     root.Add(val);
                     //root.Add(new XElement("time", DateTime.Now.ToString()));
                     //root.Add(new XElement("value", value.ToString()));
+=======
+                    root.Add(new XElement("time", DateTime.Now.ToString()));
+                    root.Add(new XElement("value", value.ToString()));
+>>>>>>> 3443762573aa2808b501eeaeb43e04f08e0eb41d
                     doc.Element("controllers").Add(root);
                     //doc.Add(root);
                     doc.Save(file);
@@ -329,11 +347,16 @@ namespace LocalController
                 }
                 else
                 {
+<<<<<<< HEAD
                     XElement val = new XElement("value", value.ToString());
                     val.Add(new XAttribute("time", DateTime.Now.ToString()));
                     element.Add(val);
                     //element.Add(new XElement("time", DateTime.Now.ToString()));
                     //element.Add(new XElement("value", value.ToString()));
+=======
+                    element.Add(new XElement("time", DateTime.Now.ToString()));
+                    element.Add(new XElement("value", value.ToString()));
+>>>>>>> 3443762573aa2808b501eeaeb43e04f08e0eb41d
                     doc1.Save(file);
                 }
             }
