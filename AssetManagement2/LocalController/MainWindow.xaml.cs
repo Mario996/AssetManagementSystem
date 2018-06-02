@@ -58,38 +58,42 @@ namespace LocalController
                         {
                             if (ld.LocalDeviceState)
                             {
-                                if (ld.LocalDeviceType.Equals("Digital"))
+                                foreach(LocalController.Classes.LocalController lc in LocalControllerList) 
                                 {
-                                    ld.LocalDeviceValue = rand.Next(0, 2);
-                                    ld.LocalDeviceValues.Add(ld.LocalDeviceValue);
-<<<<<<< HEAD
-                                    
-=======
->>>>>>> 3443762573aa2808b501eeaeb43e04f08e0eb41d
-                                    if(ld.LocalDeviceDestination.Equals("Local controller"))
+                                    if(lc.LocalControllerCode.Equals(ld.LocalDeviceControllerCode) && lc.LocalControllerState) //ovde je dodan if da bi zaustavili zapisivanje vrednosti LD-a ukoliko LC nije ukljucen
                                     {
-                                        SaveToLC(ld.LocalDeviceCode, $@"../Debug/Devices/{ld.LocalDeviceControllerCode}.xml", ld.LocalDeviceValue);
+                                        if (ld.LocalDeviceType.Equals("Digital"))
+                                        {
+                                            ld.LocalDeviceValue = rand.Next(0, 2);
+                                            ld.LocalDeviceValues.Add(ld.LocalDeviceValue);
+
+                                            if (ld.LocalDeviceDestination.Equals("Local controller"))
+                                            {
+                                                SaveToLC(ld.LocalDeviceCode, $@"../Debug/Devices/{ld.LocalDeviceControllerCode}.xml", ld.LocalDeviceValue);
+                                            }
+                                            else
+                                            {
+                                                SaveToAMS(ld.LocalDeviceCode, $"../../../AMS/bin/Debug/Controllers/ams.xml", ld.LocalDeviceValue, ld.LocalDeviceControllerCode);
+                                            }
+
+                                        }
+                                        else
+                                        {
+                                            ld.LocalDeviceValue = rand.Next(210, 240);
+                                            ld.LocalDeviceValues.Add(ld.LocalDeviceValue);
+                                            if (ld.LocalDeviceDestination.Equals("Local controller"))
+                                            {
+                                                SaveToLC(ld.LocalDeviceCode, $@"../Debug/Devices/{ld.LocalDeviceControllerCode}.xml", ld.LocalDeviceValue);
+                                            }
+                                            else
+                                            {
+                                                SaveToAMS(ld.LocalDeviceCode, $"../../../AMS/bin/Debug/Controllers/ams.xml", ld.LocalDeviceValue, ld.LocalDeviceControllerCode);
+                                            }
+
+                                        }
                                     }
-                                    else
-                                    {
-                                        SaveToAMS(ld.LocalDeviceCode, $"../../../AMS/bin/Debug/Controllers/ams.xml", ld.LocalDeviceValue, ld.LocalDeviceControllerCode);
-                                    }
-                                    
                                 }
-                                else
-                                {
-                                    ld.LocalDeviceValue = rand.Next(210, 240);
-                                    ld.LocalDeviceValues.Add(ld.LocalDeviceValue);
-                                    if(ld.LocalDeviceDestination.Equals("Local controller"))
-                                    {
-                                        SaveToLC(ld.LocalDeviceCode, $@"../Debug/Devices/{ld.LocalDeviceControllerCode}.xml", ld.LocalDeviceValue);
-                                    }
-                                    else
-                                    {
-                                        SaveToAMS(ld.LocalDeviceCode, $"../../../AMS/bin/Debug/Controllers/ams.xml", ld.LocalDeviceValue, ld.LocalDeviceControllerCode);
-                                    }
-                                    
-                                }
+                              
                             }
                         }
                         Thread.Sleep(1000);
@@ -127,7 +131,7 @@ namespace LocalController
                                 }
 
                                 File.Delete(path + "/" + trazenoImeFilea + ".xml");
-                            }
+                            }                      
                         }
 
                     }
@@ -220,10 +224,6 @@ namespace LocalController
                     xmlWriter.WriteStartElement("device");
                     xmlWriter.WriteAttributeString("code", code);
 
-                    //xmlWriter.WriteStartElement("time");
-                    //xmlWriter.WriteRaw(DateTime.Now.ToString());
-                    //xmlWriter.WriteEndElement();
-
                     xmlWriter.WriteStartElement("value");
                     xmlWriter.WriteAttributeString("time", DateTime.Now.ToString());
                     xmlWriter.WriteRaw(value.ToString());
@@ -249,34 +249,22 @@ namespace LocalController
                     XDocument doc = XDocument.Load(file);
                     XElement root = new XElement("device");
                     root.Add(new XAttribute("code", code));
-<<<<<<< HEAD
+
                     XElement val = new XElement("value", value.ToString());
                     val.Add(new XAttribute("time", DateTime.Now.ToString()));
                     root.Add(val);
-                    // root.Add(new XElement("time", DateTime.Now.ToString()));
-                   // root.Add(new XElement("value", value.ToString()),new XAttribute("time", DateTime.Now.ToString()));
-                    //root.Add(new XAttribute("time", DateTime.Now.ToString()));
-=======
-                    root.Add(new XElement("time", DateTime.Now.ToString()));
-                    root.Add(new XElement("value", value.ToString()));
->>>>>>> 3443762573aa2808b501eeaeb43e04f08e0eb41d
+
+
                     doc.Element("devices").Add(root);
                     doc.Save(file);
 
                }
                else
                {
-<<<<<<< HEAD
+
                     XElement val = new XElement("value", value.ToString());
                     val.Add(new XAttribute("time", DateTime.Now.ToString()));
                     element.Add(val);
-                    // element.Add(new XElement("time", DateTime.Now.ToString()));
-                    // element.Add(new XElement("value", value.ToString()), new XAttribute("time", DateTime.Now.ToString()));
-                    // element.Add(new XAttribute("time", DateTime.Now.ToString()));
-=======
-                    element.Add(new XElement("time", DateTime.Now.ToString()));
-                    element.Add(new XElement("value", value.ToString()));
->>>>>>> 3443762573aa2808b501eeaeb43e04f08e0eb41d
                     doc1.Save(file);
                }
             }
@@ -297,10 +285,6 @@ namespace LocalController
                     xmlWriter.WriteStartDocument();
                     xmlWriter.WriteStartElement("device");
                     xmlWriter.WriteAttributeString("code", code);
-
-                    //xmlWriter.WriteStartElement("time");
-                    //xmlWriter.WriteRaw(DateTime.Now.ToString());
-                    //xmlWriter.WriteEndElement();
 
                     xmlWriter.WriteStartElement("value");
                     xmlWriter.WriteAttributeString("time", DateTime.Now.ToString());
@@ -329,34 +313,25 @@ namespace LocalController
                     device.Add(new XAttribute("code", code));
                     root.Add(new XAttribute("time", DateTime.Now.ToString()));
                     root.Add(new XAttribute("code", controllerCode));
-                    root.Add(device);
-<<<<<<< HEAD
+                    
+
                     XElement val = new XElement("value", value.ToString());
                     val.Add(new XAttribute("time", DateTime.Now.ToString()));
-                    root.Add(val);
-                    //root.Add(new XElement("time", DateTime.Now.ToString()));
-                    //root.Add(new XElement("value", value.ToString()));
-=======
-                    root.Add(new XElement("time", DateTime.Now.ToString()));
-                    root.Add(new XElement("value", value.ToString()));
->>>>>>> 3443762573aa2808b501eeaeb43e04f08e0eb41d
+                    device.Add(val);
+                    root.Add(device);
+
                     doc.Element("controllers").Add(root);
-                    //doc.Add(root);
                     doc.Save(file);
 
                 }
                 else
                 {
-<<<<<<< HEAD
+
                     XElement val = new XElement("value", value.ToString());
                     val.Add(new XAttribute("time", DateTime.Now.ToString()));
                     element.Add(val);
-                    //element.Add(new XElement("time", DateTime.Now.ToString()));
-                    //element.Add(new XElement("value", value.ToString()));
-=======
-                    element.Add(new XElement("time", DateTime.Now.ToString()));
-                    element.Add(new XElement("value", value.ToString()));
->>>>>>> 3443762573aa2808b501eeaeb43e04f08e0eb41d
+
+
                     doc1.Save(file);
                 }
             }
