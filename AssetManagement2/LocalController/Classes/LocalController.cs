@@ -99,10 +99,10 @@ namespace LocalController.Classes
             localControllerDevices = new List<LocalDevice>();
         }
 
-        public LocalController(double period)
+        public LocalController(string code,double period)
         {
             localControllerCount++;
-            localControllerCode = "LC" + localControllerCount;
+            localControllerCode = code;
             localControllerPeriod = period;
             localControllerState = false;
             localControllerDevices = new List<LocalDevice>();

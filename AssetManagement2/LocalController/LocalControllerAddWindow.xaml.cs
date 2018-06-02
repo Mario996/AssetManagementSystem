@@ -29,7 +29,7 @@ namespace LocalController
             if (Validate())
             {
                 double period = Double.Parse(TextBoxPeriod.Text);
-                LocalController.Classes.LocalController lc = new Classes.LocalController(period);
+                LocalController.Classes.LocalController lc = new Classes.LocalController(TextBoxCode.Text,period);
                 MainWindow.LocalControllerList.Add(lc);
                 MainWindow.localControllersIds.Add(lc.LocalControllerCode);
                 this.Close();
@@ -73,6 +73,14 @@ namespace LocalController
                     TextBoxPeriod.BorderBrush = Brushes.Red;
                     TextBoxPeriod.BorderThickness = new Thickness(2);
                 }
+            }
+
+            if (TextBoxCode.Text.Trim().Equals(String.Empty))
+            {
+                result = false;
+                LabelCodeGreska.Content = "Enter the field value!";
+                TextBoxPeriod.BorderBrush = Brushes.Red;
+                TextBoxPeriod.BorderThickness = new Thickness(2);
             }
             return result;
         }

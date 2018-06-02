@@ -194,10 +194,10 @@ namespace LocalController.Classes
             localDeviceControllerCode = "";
         }
 
-        public LocalDevice(double period, int limit, string type, string destination,string lcCode)
+        public LocalDevice(string code, double period, int limit, string type, string destination,string lcCode)
         {
             localDeviceCount++;
-            localDeviceCode = "LD" + localDeviceCount.ToString();
+            localDeviceCode = code;
             localDevicePeriod = period;
             localDeviceValue = 0;
             localDeviceLimit = limit;

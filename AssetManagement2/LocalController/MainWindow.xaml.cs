@@ -178,21 +178,24 @@ namespace LocalController
 
                         foreach(string f in files)
                         {
-                            var controllerFile = XDocument.Load(f);
-                            XElement item = XElement.Load(f);
-                            XElement element = (from el in item.Elements() where (string)el.Attribute("code") == System.IO.Path.GetFileNameWithoutExtension(f) select el).FirstOrDefault();
+                            lock(f)
+                            { 
+                                var controllerFile = XDocument.Load(f);
+                                XElement item = XElement.Load(f);
+                                XElement element = (from el in item.Elements() where (string)el.Attribute("code") == System.IO.Path.GetFileNameWithoutExtension(f) select el).FirstOrDefault();
 
-                            if(element == null)
-                            {
-                                XElement controller = new XElement("controller");
-                                controller.Add(new XAttribute("code", System.IO.Path.GetFileNameWithoutExtension(f)));
-                                controller.Add(new XAttribute("time", DateTime.Now.ToString()));
-                                controller.Add(controllerFile.Root.Elements());
-                                doc.Element("controllers").Add(controller);
-                            }
-                            else
-                            {
-                                element.Add(controllerFile.Root.Elements());
+                                if(element == null)
+                                {
+                                    XElement controller = new XElement("controller");
+                                    controller.Add(new XAttribute("code", System.IO.Path.GetFileNameWithoutExtension(f)));
+                                    controller.Add(new XAttribute("time", DateTime.Now.ToString()));
+                                    controller.Add(controllerFile.Root.Elements());
+                                    doc.Element("controllers").Add(controller);
+                                }
+                                else
+                                {
+                                    element.Add(controllerFile.Root.Elements());
+                                }
                             }
                         }
 

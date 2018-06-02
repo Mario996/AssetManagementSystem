@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<devices>
+  <device code="5">
+    <value time="02-Jun-18 20:54:51">238</value>
+    <value time="02-Jun-18 20:54:52">238</value>
+    <value time="02-Jun-18 20:54:53">236</value>
+    <value time="02-Jun-18 20:54:54">232</value>
+  </device>
+  <device code="4">
+    <value time="02-Jun-18 20:54:51">226</value>
+    <value time="02-Jun-18 20:54:52">210</value>
+    <value time="02-Jun-18 20:54:53">216</value>
+    <value time="02-Jun-18 20:54:54">228</value>
+  </device>
+  <device code="25927028">
+    <value time="02-Jun-18 20:54:51">226</value>
+    <value time="02-Jun-18 20:54:52">221</value>
+    <value time="02-Jun-18 20:54:53">227</value>
+    <value time="02-Jun-18 20:54:54">233</value>
+  </device>
+</devices>

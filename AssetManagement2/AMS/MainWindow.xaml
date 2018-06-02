@@ -42,14 +42,32 @@
             </TabItem>
             <TabItem Header="Tab 3">
                 <Grid>
-
+                    <Label Content="Start: " HorizontalAlignment="Left" Height="27" Margin="10,53,0,0" VerticalAlignment="Top" Width="43"/>
+                    <Label Content="dd-MMM-yy HH:mm:ss" HorizontalAlignment="Left" Height="27" Margin="67,27,0,0" VerticalAlignment="Top" Width="131" FontSize="11"/>
+                    <TextBox Name="textBoxStartRadniSati" TextWrapping="Wrap" Text="" Margin="58,53,300,203"/>
+                    <Label Content="End: " HorizontalAlignment="Left" Height="27" Margin="10,106,0,0" VerticalAlignment="Top" Width="43" RenderTransformOrigin="0.455,2.08"/>
+                    <Label Content="dd-MMM-yy HH:mm:ss" HorizontalAlignment="Left" Height="27" Margin="67,85,0,0" VerticalAlignment="Top" Width="131" FontSize="11"/>
+                    <TextBox Name="textBoxEndRadniSati" TextWrapping="Wrap" Text="" Margin="58,117,300,139"/>
+                    <Label Content="LD: " HorizontalAlignment="Left" Height="27" Margin="10,165,0,0" VerticalAlignment="Top" Width="43"/>
+                    <TextBox Name="textBoxLDRadniSati"  HorizontalAlignment="Left" Height="27" Margin="58,165,0,0" VerticalAlignment="Top" Width="149"/>
+                    <Button Content="Show" Name="buttonShow" Click="buttonShow_Click" HorizontalAlignment="Left" Height="28" Margin="80,235,0,0" VerticalAlignment="Top" Width="118"/>
+                    <TextBox Name="textBoxReportRadniSati" HorizontalAlignment="Left" Height="272" Margin="223,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="280"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Tab 4">
-                <Grid>
-
+                <Grid>      
+                    <TextBox Name="textBox4" TextWrapping="Wrap" Text="" Margin="249,10,9.8,10"/>
+                    <Label Content="Local Controller name" HorizontalAlignment="Left" Margin="10,162,0,0" VerticalAlignment="Top" Width="130"/>
+                    <TextBox Name="textBoxNameLC" HorizontalAlignment="Left" Height="23" Margin="10,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Limit" Margin="10,220,382.8,43"/>
+                    <TextBox Name="textBoxLimit" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="10,249,0,0"/>
+                    <Button Content="Show" Click="Show4_Click" Width="75" Margin="158,249,279.8,20"/>
+                    <CheckBox Content="Broj radnih sati " Name="BrRadnihSati" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.02,-0.908"/>
+                    <CheckBox Content="Broj promjena " Name="BrPromjena" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.02,-0.908" Width="104"/>
+                    <CheckBox Content="AMS " Name="cbAMS" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.02,-0.908" Width="104"/>
+                    <CheckBox Content="Local Controller" Name="cbLC" HorizontalAlignment="Left" Margin="10,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.02,-0.908" Width="120"/>
                 </Grid>
-            </TabItem>
+             </TabItem>
         </TabControl>
     </Grid>
 </Window>

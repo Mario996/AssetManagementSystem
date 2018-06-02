@@ -37,7 +37,16 @@ namespace LocalController
             {
                 lock (MainWindow.LocalDeviceList)
                 {
-                    LocalDevice dev = new LocalDevice(Double.Parse(textBoxPeriod.Text), Int32.Parse(textBoxLimit.Text), comboBoxType.SelectedItem.ToString(), comboBoxDestination.SelectedItem.ToString(),comboBoxController.SelectedItem.ToString());
+                    foreach(LocalDevice ld in LocalController.MainWindow.LocalDeviceList)
+                    {
+                        if(textBoxCode.Text.Equals(ld.LocalDeviceCode))
+                        {
+                            textBoxCode.Text = textBoxCode.GetHashCode().ToString(); //ukoliko ime vec postoji, ime ovog LD-a postaje hash code
+                            break;
+                        }
+                    }
+
+                    LocalDevice dev = new LocalDevice(textBoxCode.Text ,Double.Parse(textBoxPeriod.Text), Int32.Parse(textBoxLimit.Text), comboBoxType.SelectedItem.ToString(), comboBoxDestination.SelectedItem.ToString(),comboBoxController.SelectedItem.ToString());
                     MainWindow.LocalDeviceList.Add(dev);
 
                     foreach(LocalController.Classes.LocalController lc in MainWindow.LocalControllerList)
