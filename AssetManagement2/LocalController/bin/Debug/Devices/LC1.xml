@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<devices>
+  <device code="LD1">
+    <value time="6/6/2018 5:00:25 PM">233</value>
+    <value time="6/6/2018 5:00:26 PM">228</value>
+    <value time="6/6/2018 5:00:27 PM">234</value>
+    <value time="6/6/2018 5:00:28 PM">231</value>
+    <value time="6/6/2018 5:00:29 PM">226</value>
+    <value time="6/6/2018 5:00:30 PM">223</value>
+  </device>
+</devices>
